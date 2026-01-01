@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even Odd Counter</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            width: 300px;
+            padding: 8px;
+        }
+        button {
+            padding: 8px 15px;
+            margin-top: 10px;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Count Even and Odd Numbers</h2>
+
+    <input type="text" id="nums" placeholder="Enter numbers like 1,2,3,4">
+    <br><br>
+    <button onclick="countEvenOdd()">Count</button>
+
+    <p id="result"></p>
+
+    <script>
+        function countEvenOdd() {
+            let arr = document.getElementById("nums").value.split(",");
+            let even = 0, odd = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                let n = parseInt(arr[i]);
+
+                if (n % 2 === 0)
+                    even++;
+                else
+                    odd++;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Even Numbers: " + even + "<br>Odd Numbers: " + odd;
+        }
+    </script>
+
+</body>
+</html>

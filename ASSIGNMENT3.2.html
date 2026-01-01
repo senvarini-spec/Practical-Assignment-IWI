@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Duplicate Values</title>
+    <!-- CSS for simple design -->
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            width: 300px;
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Remove Duplicate Values from Array</h2>
+
+    <!-- Input box to enter array values -->
+    <input type="text" id="arr" placeholder="Enter values like 1,2,2,3,4">
+    <br><br>
+
+    <!-- Button to call JS function -->
+    <button onclick="removeDuplicate()">Remove Duplicates</button>
+    <!-- Result will be shown here -->
+    <p id="result"></p>
+    <script>
+        // Function to remove duplicate values
+        function removeDuplicate() {
+
+            // Get input value and convert it into array
+            let arr = document.getElementById("arr").value.split(",");
+
+            // Create empty array for unique values
+            let unique = [];
+
+            // Loop through input array
+            for (let i = 0; i < arr.length; i++) {
+
+                // Check if value is not already in unique array
+                if (unique.indexOf(arr[i]) === -1) {
+                   // Add unique value
+                    unique.push(arr[i]);
+                }
+            }
+            // Display result
+            document.getElementById("result").innerHTML =
+                "Unique Values: " + unique.join(", ");
+        }
+    </script>
+</body>
+</html>

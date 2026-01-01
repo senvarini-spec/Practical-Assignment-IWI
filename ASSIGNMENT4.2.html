@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiline String using Template Literals</title>
+
+    <!-- CSS for simple styling -->
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            white-space: pre-line; /* To show multiline text */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Template Literals Multiline String</h2>
+
+    <!-- Button to show message -->
+    <button onclick="showMessage()">Show Message</button>
+
+    <!-- Multiline message will be displayed here -->
+    <p id="msg"></p>
+
+    <script>
+        // Function to show multiline message
+        function showMessage() {
+
+            // Multiline string using template literals
+            let message = `Hello!
+Welcome to JavaScript.
+Template Literals are easy.`;
+
+            // Display message
+            document.getElementById("msg").innerText = message;
+        }
+    </script>
+
+</body>
+</html>

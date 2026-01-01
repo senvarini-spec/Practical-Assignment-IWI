@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Paragraph Text on Button Click</title>
+
+    <!-- CSS for simple styling -->
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Button Click Event Example</h2>
+
+    <!-- Paragraph whose text will change -->
+    <p id="para">This is original text.</p>
+
+    <!-- Button to trigger click event -->
+    <button id="btn">Click Me</button>
+
+    <script>
+        // Get button element
+        let button = document.getElementById("btn");
+
+        // Add click event to button
+        button.addEventListener("click", function () {
+
+            // Change paragraph text on button click
+            document.getElementById("para").innerHTML =
+                "Text changed after button click!";
+        });
+    </script>
+
+</body>
+</html>

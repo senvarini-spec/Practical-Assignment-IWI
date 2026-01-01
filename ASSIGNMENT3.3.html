@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Array Numbers</title>   
+    <!-- CSS for simple design -->
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            width: 300px;
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Find Sum of Array Elements</h2>
+
+    <!-- Input box to enter array values -->
+    <input type="text" id="arr" placeholder="Enter numbers like 1,2,3,4">
+    <br><br>
+    <!-- Button to call JS function -->
+    <button onclick="findSum()">Find Sum</button>
+
+    <!-- Result will be displayed here -->
+    <p id="result"></p>
+    <script>
+        // Function to find sum of array elements
+        function findSum() {
+            
+            // Get input value and convert it into array
+            let arr = document.getElementById("arr").value.split(",");
+
+            // Variable to store sum
+            let sum = 0;
+
+            // Loop through array elements
+            for (let i = 0; i < arr.length; i++) {
+
+                // Convert string to number and add to sum
+                sum = sum + parseInt(arr[i]);
+            }
+
+            // Display result
+            document.getElementById("result").innerHTML =
+                "Sum of all numbers: " + sum;
+        }
+    </script>
+
+</body>
+</html>

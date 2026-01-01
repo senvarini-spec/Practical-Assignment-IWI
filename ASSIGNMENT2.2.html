@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Flex container */
+.flex-container {
+  display: flex;                  /* places boxes side by side */
+  justify-content: space-between; /* space between boxes */
+  padding: 20px;
+}
+
+/* Inner boxes */
+.flex-container div {
+  width: 80px;
+  height: 80px;
+  background-color: lightblue;
+  text-align: center;
+  line-height: 80px;
+  font-size: 20px;
+  border: 2px solid black;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  .flex-container {
+    flex-direction: column; /* stack boxes vertically */
+    gap: 10px;              /* space between stacked boxes */
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="flex-container">
+  <div>A</div>
+  <div>B</div>
+  <div>C</div>
+</div>
+
+</body>
+</html>

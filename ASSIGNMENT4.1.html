@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Even Number</title>
+    <!-- CSS for simple styling -->
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            width: 250px;
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Check Even Number (Arrow Function)</h2>
+
+    <!-- Input box for number -->
+    <input type="number" id="num" placeholder="Enter a number">
+    <br><br>
+    <!-- Button to check even -->
+    <button onclick="checkEven()">Check</button>
+
+    <!-- Result shown here -->
+    <p id="result"></p>
+    <script>
+        // Arrow function to check even number
+        // Returns true if number is even, otherwise false
+        const isEven = (num) => {
+            return num % 2 === 0;
+        };
+
+        // Function called on button click
+        function checkEven() {
+
+            // Get number from input
+            let n = parseInt(document.getElementById("num").value);
+
+            // Call arrow function and show result
+            if (isEven(n)) {
+                document.getElementById("result").innerHTML =
+                    "True → Number is Even";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "False → Number is Odd";
+            }
+        }
+    </script>
+</body>
+</html>

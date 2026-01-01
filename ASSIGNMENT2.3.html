@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* basic text input */
+    input[type="text"]{
+      border: 5px solid gray;   /* initial border */
+      padding: 8px;
+      transition: border-color 0.4s, 
+                  transform 0.4s;   /* smooth transition */
+    }
+
+    /* when input is focused */
+    input[type="text"]:focus{
+      border-color: brightgreen;   /* green border */
+      transform: rotate(1deg);     /* slight rotation */
+      outline: none;               /* remove default outline */
+    }
+  </style>
+</head> 
+<body>
+
+  <input type="text" placeholder="Enter text">
+
+</body>
+</html>
